@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你散散的博客</title><meta name="author" content="你散散,1027697993@qq.com"><meta name="copyright" content="你散散"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<meta property="og:title" content="你散散的博客">
+<meta property="og:url" content="https://nisansan233.github.io/index.html">
+<meta property="og:site_name" content="你散散的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://nisansan233.github.io/img/qiqi.jpg">
+<meta property="article:author" content="你散散">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://nisansan233.github.io/img/qiqi.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://nisansan233.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-03-05 09:49:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/qiqi.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">你散散的博客</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">你散散的博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/nisansan233" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:haikuoyunkai233@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/235067157" target="_blank" title="BiliBili"><i class="fab fa-bilibili"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/02/09/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FREADME/" title="后台管理系统README">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="后台管理系统README"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/09/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FREADME/" title="后台管理系统README">后台管理系统README</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-09T15:49:04.000Z" title="发表于 2021-02-09 23:49:04">2021-02-09</time></span></div><div class="content">电商后台管理系统(前端项目）  预览后端API接口源码  下载.  接口API
+有问题的道友，欢迎加群讨论，将为您悉心解答：827923683
+
+功能
+用于管理用户账号，商品分类，商品信息，订单，数据统计等业务功能
+
+
+开发模式
+电商后台管理系统整体采用前后端分离的开发模式,其中前端项目是基于Vue技术栈的SPA项目
+
+
+技术选型前端项目技术栈
+Vue
+Vue-router
+Element-UI
+Axios
+Echarts
+
+后端项目技术栈
+Node.js
+
+Express
+
+Jwt
+
+Mysql
+
+Sequelize
+接口API.后端源码  下载.
+
+
+项目初始化前端项目初始化步骤
+安装 Vue 脚手架
+通过 Vue-Cli 创建项目
+配置 Vue-router
+配置 Element-UI 组件库
+配置 Axios 库
+初始化 git 远程仓库123456789101112&#x2F;&#x2F;Git全局设置git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱地址&q ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/31/CSS3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="CSS3-移动端">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CSS3-移动端"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/31/CSS3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="CSS3-移动端">CSS3-移动端</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-31T13:42:46.000Z" title="发表于 2021-01-31 21:42:46">2021-01-31</time></span></div><div class="content">一.移动端基础
+移动端浏览器我们主要对webkit内核进行兼容
+我们现在开发的移动端主要针对手机端开发
+现在移动端碎片化比较严重,分辨率和屏幕尺寸大小不一
+学会用谷歌浏览器模拟手机界面以及调试
+
+二.视口
+视口(viewport)就是浏览器显示页面内容的屏幕区域.视口可以分为布局视口,视觉视口和理想视口
+
+二倍图移动端会为了显示,将图片进行缩放
+
+二倍精灵图制作方式
+在firework里面将精灵图等比例缩放到原来的一半
+之后根据大小 测量坐标
+注意代码里面background-size也要写:精灵图原来宽度的一半移动端开发选择
+
+
+
+
+ 单独移动端页面
+ 响应式兼容PC移动端
+
+移动端技术解决方案
+ 移动端浏览器webkit
+ CSS初始化 normalize.css
+CSS3 盒子模型 box-sizing
+box-sizing
+box-sizing用于设置盒子模型中宽高的行为
+传统盒子模型
+content-box
+含义是设置宽度和高度时只指定内容的宽高
+padding,border都是布置在width,height外边
+
+
+
+
+CSS3盒子模型
+border-box
+含义是设置宽度 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/05/Vue%20Cli/" title="Vue Cli">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue Cli"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/05/Vue%20Cli/" title="Vue Cli">Vue Cli</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-05T03:33:51.000Z" title="发表于 2021-01-05 11:33:51">2021-01-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Vue%E6%A1%86%E6%9E%B6/">Vue框架</a></span></div><div class="content">四. Vue CLI4.1. 什么是CLI
+脚手架是什么东西.
+
+   CLI是Command-Line Interface, 翻译为命令行界面, 但是俗称脚手架.
+   Vue CLI是一个官方发布 vue.js 项目脚手架
+   使用 vue-cli 可以快速搭建Vue开发环境以及对应的webpack配置.
+
+
+CLI依赖webpack,node,npm
+
+安装CLI3 -&gt; 拉去CLI2模块安装Vue脚手架
+1npm install -g @vue&#x2F;cli -g
+拉去CLI2模块
+1npm install @vue&#x2F;cli-init
+
+
+
+   Vue CLI2初始化项目
+1vue init webpack my-project
+
+   Vue CLI3初始化项目
+
+
+1vue create my-project
+4.2. CLI2初始化项目的过程
+4.3. CLI2生产的目录结构的解析
+一. Vue CLI如果npm run build进行打包,index.html无法打开修改config/index.js里build的对象里assetsPublicP ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/02/webpack%E7%9A%84%E4%BD%BF%E7%94%A8/" title="webpack的使用">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="webpack的使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/02/webpack%E7%9A%84%E4%BD%BF%E7%94%A8/" title="webpack的使用">webpack的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-02T01:27:18.000Z" title="发表于 2021-01-02 09:27:18">2021-01-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Vue%E6%A1%86%E6%9E%B6/">Vue框架</a></span></div><div class="content">二. 前端模块化为什么要使用模块化CommonJS（了解）
+  模块化有两个核心：导出和导入
+CommonJS的导出：
+123456789modeule.exports&#x3D;&#123;  flag:true,  test(a,b)&#123;    return a+b  &#125;,  demo(a,b)&#123;    return a*b  &#125;&#125;
+CommonJS导出
+1module.exports &#x3D;&#123;test,demo&#125;;
+CommonJS的导入
+1let&#123;flag,test,demo&#125;&#x3D;require(&#39;moduleA&#39;)
+
+ES6:
+
+导出export方式一：
+1234567891011\\aaa.jsvar name&#x3D;&quot;小明&quot;;var age&#x3D;18;var flag&#x3D;true;function sum(num1,num2) &#123;  return num1+num2;&#125;if (flag)&#123; ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/29/Vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" title="Vue的组件化">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue的组件化"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/29/Vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" title="Vue的组件化">Vue的组件化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-29T13:07:59.000Z" title="发表于 2020-12-29 21:07:59">2020-12-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Vue%E6%A1%86%E6%9E%B6/">Vue框架</a></span></div><div class="content">一. 组件化开发组件的使用分为三大步
+
+   创建组件构造器 调用Vue.extend()方法
+   注册组件        调用Vue.component()方法
+   使用组件
+
+123456789101112131415161718192021&#x2F;&#x2F;3.使用组件&lt;div id&#x3D;&quot;app&quot;&gt;  &lt;my-cpn&gt;&lt;&#x2F;my-cpn&gt;  &lt;my-cpn&gt;&lt;&#x2F;my-cpn&gt;  &lt;my-cpn&gt;&lt;&#x2F;my-cpn&gt;  &lt;my-cpn&gt;&lt;&#x2F;my-cpn&gt;&lt;&#x2F;div&gt;&lt;script src&#x3D;&quot;..&#x2F;js&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;&lt;script&gt;  &#x2F;&#x2F;1.创建组件构造器对象  const cpnC &#x3D; Vue.extend(&#123;  	&#x2 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/27/ES6%E8%AF%AD%E6%B3%95/" title="ES6语法">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES6语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/27/ES6%E8%AF%AD%E6%B3%95/" title="ES6语法">ES6语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-27T09:21:33.000Z" title="发表于 2020-12-27 17:21:33">2020-12-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AFES6/">前端ES6</a></span></div><div class="content">块级作用域我们可以将let看成更完美的var变量作用域：变量在什么范围内是可用的const关键字
+
+注意一：一旦给const修饰的标识符被赋值之后，不能修改
+注意二：在使用const定义标识符，必须进行赋值
+注意三：常量的含义是指向的对象不能修改，但可以改变对象的内部属性    
+
+对象的增强写法
+   属性的简写123456789101112131415&#x2F;&#x2F;ES6之前let name &#x3D;&#39;why&#39;let age &#x3D; 18let obj1 &#x3D; &#123;	name: name,	 age: age&#125;console.log(obj1);&#x2F;&#x2F;ES6之后let name &#x3D;&#39;why&#39;let age &#x3D; 18let obj2 &#x3D; &#123;	name,age&#125;console.log(obj2);
+   方法的简写1234567891011121314&#x2F;&#x2F;ES6之前let obj1 &#x3D; &#123;	test:  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/24/Vue%E5%85%A5%E9%97%A8/" title="Vuejs入门">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vuejs入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/24/Vue%E5%85%A5%E9%97%A8/" title="Vuejs入门">Vuejs入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-24T03:34:28.320Z" title="发表于 2020-12-24 11:34:28">2020-12-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Vue%E6%A1%86%E6%9E%B6/">Vue框架</a></span></div><div class="content">官网实例123456789101112131415161718&lt;body&gt;    &lt;!--第一个vue实栗--&gt;    &lt;div id&#x3D;&quot;app&quot;&gt;        &#123;&#123;message&#125;&#125;    &lt;&#x2F;div&gt;    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;    &lt;script&gt;    	&#x2F;&#x2F;注意这里构造Vue开头要大写哦，不然会报引用错误        var app &#x3D; new Vue(&#123;            el:&#39;#app&#39;,            data:&#123;                message:&#39;hello world&#39;      ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/23/Ajax&amp;Json/" title="Ajax&amp;Json">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ajax&amp;Json"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/23/Ajax&amp;Json/" title="Ajax&amp;Json">Ajax&amp;Json</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-23T04:17:42.000Z" title="发表于 2020-12-23 12:17:42">2020-12-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AFAjax-Json/">前端Ajax&amp;Json</a></span></div><div class="content">今日内容1. AJAX：
+2. JSON
+AJAX：1. 概念： ASynchronous JavaScript And XML    异步的JavaScript 和 XML    1. 异步和同步：客户端和服务器端相互通信的基础上
+        * 客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。
+        * 客户端不需要等待服务器端的响应。在服务器处理请求的过程中，客户端可以进行其他的操作。
+
+        Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。 [1] 
+        通过在后台与服务器进行少量数据交换，Ajax 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+        传统的网页（不使用 Ajax）如果需要更新内容，必须重载整个网页页面。
+
+        提升用户的体验
+2. 实现方式：    1. 原生的JS实现方式（了解）
+                 //1.创建核心对象
+                var xmlhttp;
+             ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/21/JQuery%E9%AB%98%E7%BA%A7/" title="JQuery高级">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JQuery高级"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/21/JQuery%E9%AB%98%E7%BA%A7/" title="JQuery高级">JQuery高级</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-21T10:41:18.000Z" title="发表于 2020-12-21 18:41:18">2020-12-21</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AFJquery%E9%AB%98%E7%BA%A7/">前端Jquery高级</a></span></div><div class="content">JQuery 高级1. 动画    1. 三种方式显示和隐藏元素
+        1. 默认显示和隐藏方式
+            1. show([speed,[easing],[fn]])
+                1. 参数：
+                    1. speed：动画的速度。三个预定义的值(&quot;slow&quot;,&quot;normal&quot;, &quot;fast&quot;)或表示动画时长的毫秒数值(如：1000)
+                    2. easing：用来指定切换效果，默认是&quot;swing&quot;，可用参数&quot;linear&quot;
+                        * swing：动画执行时效果是 先慢，中间快，最后又慢
+                        * linear：动画执行时速度是匀速的
+                    3. fn：在动画完成时执行的函数，每个元素执行一次。
+
+            2. hide([speed,[easi ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/20/JQuery%E5%9F%BA%E7%A1%80/" title="JQuery基础">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JQuery基础"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/20/JQuery%E5%9F%BA%E7%A1%80/" title="JQuery基础">JQuery基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-20T10:57:50.000Z" title="发表于 2020-12-20 18:57:50">2020-12-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AFJquery%E5%9F%BA%E7%A1%80/">前端Jquery基础</a></span></div><div class="content">JQuery 基础：1. 概念： 一个JavaScript框架。简化JS开发    * jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨    是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优    化HTML文档操作、事件处理、动画设计和Ajax交互。
+
+    * JavaScript框架：本质上就是一些js文件，封装了js的原生代码而已
+2. 快速入门    1. 步骤：
+        1. 下载JQuery
+            * 目前jQuery有三个大版本：
+                1.x：兼容ie678,使用最为广泛的，官方只做BUG维护，
+                     功能不再新增。因此一般项目来说，使用1.x版本就可以了，
+                     最终版本：1.12.4 (2016年5 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/qiqi.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">你散散</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/nisansan233"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/nisansan233" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:haikuoyunkai233@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/235067157" target="_blank" title="BiliBili"><i class="fab fa-bilibili"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/09/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FREADME/" title="后台管理系统README"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="后台管理系统README"/></a><div class="content"><a class="title" href="/2021/02/09/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FREADME/" title="后台管理系统README">后台管理系统README</a><time datetime="2021-02-09T15:49:04.000Z" title="发表于 2021-02-09 23:49:04">2021-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/31/CSS3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="CSS3-移动端"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CSS3-移动端"/></a><div class="content"><a class="title" href="/2021/01/31/CSS3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/" title="CSS3-移动端">CSS3-移动端</a><time datetime="2021-01-31T13:42:46.000Z" title="发表于 2021-01-31 21:42:46">2021-01-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/05/Vue%20Cli/" title="Vue Cli"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue Cli"/></a><div class="content"><a class="title" href="/2021/01/05/Vue%20Cli/" title="Vue Cli">Vue Cli</a><time datetime="2021-01-05T03:33:51.000Z" title="发表于 2021-01-05 11:33:51">2021-01-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/02/webpack%E7%9A%84%E4%BD%BF%E7%94%A8/" title="webpack的使用"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="webpack的使用"/></a><div class="content"><a class="title" href="/2021/01/02/webpack%E7%9A%84%E4%BD%BF%E7%94%A8/" title="webpack的使用">webpack的使用</a><time datetime="2021-01-02T01:27:18.000Z" title="发表于 2021-01-02 09:27:18">2021-01-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/29/Vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" title="Vue的组件化"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue的组件化"/></a><div class="content"><a class="title" href="/2020/12/29/Vue%E7%9A%84%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" title="Vue的组件化">Vue的组件化</a><time datetime="2020-12-29T13:07:59.000Z" title="发表于 2020-12-29 21:07:59">2020-12-29</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Vue%E6%A1%86%E6%9E%B6/"><span class="card-category-list-name">Vue框架</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AFAjax-Json/"><span class="card-category-list-name">前端Ajax&Json</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AFCSS3/"><span class="card-category-list-name">前端CSS3</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AFES6/"><span class="card-category-list-name">前端ES6</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AFJavaScript%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">前端JavaScript基础</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AFJavaScript%E9%AB%98%E7%BA%A7/"><span class="card-category-list-name">前端JavaScript高级</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AFJquery%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">前端Jquery基础</span><span class="card-category-list-count">1</span></a></li>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/CSS3/" style="font-size: 1.1em; color: #999">CSS3</a> <a href="/tags/vue%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/" style="font-size: 1.1em; color: #999">vue实战项目</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 1.5em; color: #99a9bf">分享</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 1.5em; color: #99a9bf">导航</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" style="font-size: 1.1em; color: #999">移动端</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">12</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">16</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-05T01:49:30.735Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 你散散</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
